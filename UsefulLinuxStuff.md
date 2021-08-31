@@ -92,6 +92,15 @@ fi
 ## Intellij not working in dwm
 * Add `export _JAVA_AWT_WM_NONREPARENTING=1` to your `.bash_profile` file
 
+## Is it me or is one headphone side louder than the other?
+* If you use `pulse`, the easiest way is to install `pavucontrol` (should be in Arch/Artix standard repo), run it, select your device under output and click on the lock symbol in the upper right corner. Adjust both sliders to be at the same level.
+
+## I'm trying to install something with `yay` but it has a conflicting dependency
+* You can try removing the dependency from the `PKGBUILD` file. For example `freetube` works with `nodejs` instead of `nodejs-lts-x` (at least on the current version). To do this:
+* `yay -G <package_name>` - This creates a folder named after a package. `cd` into it.
+* Edit the `PKGBUILD` file (remove the conflicting dependency/ies)
+* Run `makepkg -si`
+
 ## Linux alternatives by Dbp:
 ### GUI:
 * Calculator > qalculate(-gtk)
